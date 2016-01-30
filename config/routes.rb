@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+
+  root 'pages#home'
+
+  devise_for :users,
+             :path => '',
+             # in future only call localhost:3000/login not localhost:3000/users/sign_in, etc
+             :path_names => {:sign_in => 'login', :sign_out => 'logout', :edit => 'profile'},
+             # in future call omniauth_callbacks for devise controllers
+             :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
+
+  resources :users, only: [:show]
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
