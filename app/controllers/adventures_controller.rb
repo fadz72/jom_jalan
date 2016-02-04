@@ -31,7 +31,7 @@ class AdventuresController < ApplicationController
     if current_user
       @adventure = current_user.adventures.new(adventure_params)
     end
-
+    
     respond_to do |format|
       if @adventure.save
         format.html { redirect_to @adventure, notice: 'Adventure was successfully created.' }
