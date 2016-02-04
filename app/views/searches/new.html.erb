@@ -1,0 +1,20 @@
+<h1> Advance Search </h1>
+
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+	<div class="field">
+		<%= s.label :country %></br>
+		<%= s.text_field :country %>
+	</div>
+
+	<div class="field">
+		<%= s.label :time %></br>
+		<%= s.text_field :time %></br>
+	</div>
+
+	<div class="actions"><%= s.submit "Search", class: "pure-button pure-button-primary" %></div> 
+
+	<% end %> 
+
+	<p><%= link_to 'Back', adventures_path %></p>

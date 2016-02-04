@@ -1,0 +1,22 @@
+<body id='bg'>
+
+	<h2> Find a travel companion anywhere, anytime </h2>
+	</br>
+	<h4> Filter by the country you want to visit, when you want to visit. </br>
+		Then choose your ideal travel buddy. It's that easy! </h4> 
+
+	<br>
+	<br>
+
+<%= form_tag adventures_path, :method => 'get' do %>
+	<div class="row">
+		<div class="col-md-6">
+			 <%= text_field_tag :search, params[:search] , :placeholder => "Country I Want To Travel To", class: "form-control" %>
+		</div>
+
+		<div class="col-md-2">
+			<%= submit_tag "Search", class: "btn btn-primary"%>
+		</div>
+	</div>
+<% end %>
+</body>

@@ -1,0 +1,20 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bg {  
+  color: #565a5c;
+  background-color: #F8F8F8;
+ background: 
+    asset_url("3.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+}
+
+#hdjomjalan {
+	font-family: Georgia;
+	font-size: 4em;
+	color: #1C1C1C;
+}

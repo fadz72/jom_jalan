@@ -1,0 +1,41 @@
+
+<div class="row">
+
+  <div class="col-md-2">
+    <div class="center">
+      <%= image_tag avatar_url(@user), class: "avatar-full" %>
+    </div>
+  </div>
+
+  <div class="col-md-6 text-center">
+    <h2>Edit Profile </h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render 'shared/devisemes' %>
+
+        <div class="form-group">
+          <%= f.text_field :fullname, :class => 'form-control', :placeholder => 'Full Name', autofocus: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :birthday, :class => 'form-control', :placeholder => "DD/MM/YYYY" %> 
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :home_country, :class => 'form-control', :placeholder => "Country of Origin" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_area :description, rows: 5, cols: 25, :class => 'form-control', :placeholder => "Write about yourself..." %>
+          <div align="right">max. 300 characters</div>
+        </div>
+  
+        <div class="actions">
+          <%= f.submit "Save", :class => "btn btn-primary" %>
+        </div>
+
+      <% end %>
+  </div>
+</div>
+
+ 

@@ -1,0 +1,27 @@
+<%= form_for(@adventure) do |f| %>
+  <% if @adventure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adventure.errors.count, "error") %> prohibited this adventure from being saved:</h2>
+
+      <ul>
+      <% @adventure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :destination %><br>
+    <%= f.text_field :destination , :placeholder => "Country" %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time , :placeholder => "Month Year" %>
+  </div>
+
+  <div class="actions">
+
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  </div>
+<% end %>

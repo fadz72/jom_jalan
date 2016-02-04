@@ -1,0 +1,22 @@
+<h1> Search Results</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_adventures.empty? %>
+
+	<p> No Records Found </p> 
+
+<% else %>
+
+<% @search.search_adventures.each do |c| %> 
+<br> 
+
+	<div class="div">
+		<h1><%= c.destination %></h1>
+		<p>time: <%= c.time %></p> 
+		<p>user: <%= c.user.fullname %></p>
+	</div>
+
+	<% end %> 
+
+<% end %> 
